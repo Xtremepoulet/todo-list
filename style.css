@@ -1,0 +1,56 @@
+body {
+    margin: auto 0px;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+
+    border: thin solid black;
+
+    gap: 20px;
+    padding: 0px;
+    margin: 0px 
+}
+
+
+.nav_element {
+    border-right: thin solid black;
+    padding: 10px;
+    margin: 0px;
+}
+
+
+
+.box_element {
+    border: thin solid black;
+}
+
+
+#todo_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 10px;
+    list-style: none;
+
+}
+
+.list_item {
+    border: thin solid black;
+    margin: 0px;
+    padding: 150px;
+}
+
+
+.add_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.red {
+    background-color: red;
+}
