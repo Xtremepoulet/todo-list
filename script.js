@@ -1,3 +1,6 @@
+
+
+
 let li = document.querySelectorAll("li"); 
 
 let button = document.querySelector("button");
@@ -20,9 +23,11 @@ add_ended_button(li);
 
 
 
+//pas forcement la bonne manière mais elle marche. A voir de nouvelles 
 let task_ended = (event) => {
     if (event.target.tagName === "BUTTON") {
-        event.target.classList.toggle("red");
+        let parent = event.target.parentNode;
+        parent.classList.toggle("red");
       
     }
 }
