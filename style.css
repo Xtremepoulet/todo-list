@@ -3,29 +3,78 @@ body {
 }
 
 
+
+/* navigation bar */
 .navigation {
     display: flex;
-    flex-direction: row;
+    align-items: center;
 
     border: thin solid black;
 
-    gap: 20px;
+    /* gap: 20px; */
     padding: 0px;
     margin: 0px 
 }
 
 
 .nav_element {
-    border-right: thin solid black;
-    padding: 10px;
+    
+    padding: 20px;
     margin: 0px;
 }
 
 
 
-.box_element {
-    border: thin solid black;
+
+
+
+/* presentation div */
+.presentation {
+ 
+    height: 30vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+
+/* add element div */
+.add_element {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+/* class for delete items on the list. this class was created  and attributed in the script.js file */
+.delete_button {
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* englobe list/grid... element with every todo elements */
+/* .box_element {
+    border: thin solid black;
+} */
 
 
 #todo_list {
@@ -39,19 +88,11 @@ body {
 
 .list_item {
     border: thin solid black;
+    border-radius: 20px;
     margin: 0px;
     padding: 150px;
 }
 
 
-.add_item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
-.red {
-    background-color: red;
-    opacity: 0.5;
-}
