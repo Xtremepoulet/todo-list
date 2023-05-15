@@ -5,6 +5,8 @@ let li = document.querySelectorAll("li");
 let ul = document.getElementById("todo_list");
 let input = document.getElementById("new_item");
 let add_new_item = document.getElementById("add_item_button");
+let body = document.getElementById("gradient");
+let color = document.getElementById("color_btn");
 
 
 
@@ -32,10 +34,12 @@ let add_ended_button = (li) => {
 let delete_list = event => {
     if (event.target.tagName === "BUTTON" && event.target.className === "delete_button"){
         let parent = event.target.parentNode;
-        parent.remove()
-        
+        parent.remove();
     }
 }
+
+
+
 
 
 
@@ -43,7 +47,6 @@ let add_list_item = (ul, input) => {
     let new_item = document.createElement("li");
     new_item.append(document.createTextNode(input.value));
     new_item.classList.add("list_item");
-
 
     let button = document.createElement("button");
     button.append(document.createTextNode("Done"));
@@ -57,25 +60,31 @@ let add_list_item = (ul, input) => {
     input.value = "";
 } 
 
+
+
+
+
 let add_item = event => {
-    if (event.target.tagName === "BUTTON" && event.target.id === "add_item_button"){
+    if (event.target.tagName === "BUTTON" && event.target.id === "add_item_button" && input.value !== ""){
         add_list_item(ul, input);
     }
 }
+
+
+
+let change_color = () => {
+    body.style.background = color.value;
+}
+
 
 
 add_ended_button(li);
 
 add_new_item.addEventListener("click", add_item);
 
-
-
-
-
 ul.addEventListener("click", delete_list);
 
-
-
+color_btn.addEventListener("input", change_color);
 
 
 

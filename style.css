@@ -1,5 +1,6 @@
 body {
     margin: auto 0px;
+    background: rgb(236, 223, 223);
 }
 
 
@@ -13,7 +14,12 @@ body {
 
     /* gap: 20px; */
     padding: 0px;
-    margin: 0px 
+    margin: 0px;
+
+    /* position: fixed; 
+    top: 0;
+    width: 100%;
+  */
 }
 
 
@@ -30,24 +36,59 @@ body {
 
 /* presentation div */
 .presentation {
- 
-    height: 30vh;
+    height: 20vh;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+
+    font-style: italic;
+
+
+    /* animate the presentation text */
+    animation-duration: 2s;
+    animation-name: slide-in; 
+}
+
+@keyframes slide-in {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 
 
-
 /* add element div */
-.add_element {
+/* .add_element {
     height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+} */
+
+.add_element {
+   
+    height: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#new_item {
+    width: 10vh;
+    height: 10vh;
+
+    border-radius: 20px;
+    
 }
 
 
@@ -60,6 +101,15 @@ body {
 
 }
 
+
+
+
+/* add button in html file */
+#add_item_button {
+    border-radius: 10px;
+    background-color: #B5D4BA;
+    
+}
 
 
 
@@ -81,18 +131,36 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    margin: 10px;
-    list-style: none;
+    margin: 20px;
+    padding: 10px;
+    list-style: none;    
 
 }
+
+
 
 .list_item {
     border: thin solid black;
     border-radius: 20px;
     margin: 0px;
-    padding: 150px;
+    padding: 70px;
+
+    background: linear-gradient(to right, rgb(232, 181, 181), rgb(197, 186, 186));
+    
+
+    
+}
+
+.list_item:hover {
+    transition: 1.2s;
+    transform: scale(1.1);
 }
 
 
 
 
+
+/* footer  */
+#footer {
+    text-align: center;
+}
